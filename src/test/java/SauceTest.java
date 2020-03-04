@@ -42,6 +42,8 @@ public class SauceTest
 
 		driver = new RemoteWebDriver(url, capabilities);
 		wait = new WebDriverWait(driver, 10);
+		sessionID = driver.getSessionId();
+		api = new SauceREST(SAUCE_USERNAME, SAUCE_ACCESS_KEY);
 	}
 
 	@Test
